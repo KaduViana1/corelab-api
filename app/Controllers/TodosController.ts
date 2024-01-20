@@ -18,23 +18,18 @@ export default class TodosController {
     }
   }
 
-  public async search({}: HttpContextContract) {}
-
   public async update({ params, request }: HttpContextContract) {
-    const body = request.body()
+    const payload = request.body()
 
-    let todo = await Todo.findOrFail(params.id)
-
-    todo.title = body.title
-    todo.content = body.content
-    todo.isFavorite = body.is_favorite
-
-    return await todo.save()
-  }
-
-  public async destroy({ params }: HttpContextContract) {
     const todo = await Todo.findOrFail(params.id)
 
+    return await todo.merge(payload).save()
+  }
+
+  public async destroy({ params, response }: HttpContextContract) {
+    const todo = await Todo.findOrFail(params.id)
+
+    response.status(204)
     return await todo.delete()
   }
 }

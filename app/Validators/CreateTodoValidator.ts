@@ -26,7 +26,7 @@ export default class CreateTodoValidator {
   public schema = schema.create({
     title: schema.string(),
     content: schema.string(),
-    color: schema.string.nullable(),
+    color: schema.string.nullableAndOptional(),
     is_favorite: schema.boolean(),
   })
 

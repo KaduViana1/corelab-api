@@ -21,4 +21,3 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.resource('/todos', 'TodosController').apiOnly()
-Route.get('/todos/:search?', 'TodoController.search')
