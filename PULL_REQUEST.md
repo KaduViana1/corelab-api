@@ -5,8 +5,11 @@ link to github repository [back-end repository](https://github.com/KaduViana1/co
 This AdonisJS api has 4 endpoints to:
 
 1 - Get all the todos
+
 2 - Create a todo
+
 3 - Update a todo
+
 4 - Delete a todo
 
 I choose PostgreSQL to use as a database.
