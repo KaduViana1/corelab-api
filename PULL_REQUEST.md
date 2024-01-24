@@ -39,7 +39,7 @@ You can either run the application on your machine oy using docker containers.
 
 To run in your machine you will need to add a .env file with the necessary environment variables for the application and to your database connection (use .env.example as a reference).
 If you want to use docker just for the database you can comment the "adonis_api" service from the docker compose and doa a "docker compose up -d" command on the terminal (ensuring you have the postgres necessary variables on your .env file)
-Then you can run "npm run dev" to run the application in development mode. The first time you run the database you should have to run a "node ace migration:run" or "node ace migration:fresh" to make the database migrations. Done, the api is ready to be used!
+Then you can run "npm install" to install all dependencies and "npm run dev" to run the application in development mode. The first time you run the database you should have to run a "node ace migration:run" or "node ace migration:fresh" to make the database migrations. Done, the api is ready to be used!
 
 (To use in production you have to run "npm run build", paste the .env file in the "build" folder, cd into the build folder and run "node server.js")
 
