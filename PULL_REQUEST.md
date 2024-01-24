@@ -35,7 +35,7 @@ The [monorepo repository](https://github.com/KaduViana1/corelab-monorepo)
 
 You can either run the application on your machine oy using docker containers.
 
-# Local:
+### Local:
 
 To run in your machine you will need to add a .env file with the necessary environment variables for the application and to your database connection (use .env.example as a reference).
 If you want to use docker just for the database you can comment the "adonis_api" service from the docker compose and doa a "docker compose up -d" command on the terminal (ensuring you have the postgres necessary variables on your .env file)
@@ -43,7 +43,7 @@ Then you can run "npm run dev" to run the application in development mode. The f
 
 (To use in production you have to run "npm run build", paste the .env file in the "build" folder, cd into the build folder and run "node server.js")
 
-# Using Docker:
+### Using Docker:
 
 This repository has "Dockerfile" and "docker-compose.yaml" files to easily run the API using docker containers.
 You'll just have to create a .env file with the needed environment variables (.env.exemple as reference).
